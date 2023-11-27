@@ -3,7 +3,7 @@
   diff = auto
   interactive = auto
   status = auto
-  ui = auto
+	ui = auto
 
 [color "branch"]
   current = green
@@ -14,7 +14,7 @@
   editor = code --wait
 
 [alias]
-  co = checkout
+	co = checkout
   st = status -sb
   br = branch
   ci = commit
@@ -22,6 +22,15 @@
   d = !git --no-pager diff
   dt  = difftool
   stat = !git --no-pager diff --stat
+  # co = checkout
+  # br = branch
+  # ci = commit
+  # st = status
+  # lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+  # last = log -1 HEAD
+  # amend = commit --amend
+  # undo = reset HEAD^
+  # unstage = reset HEAD --
 
   # Set remotes/origin/HEAD -> defaultBranch (copied from https://stackoverflow.com/a/67672350/14870317)
   remoteSetHead = remote set-head origin --auto
@@ -44,6 +53,7 @@
 
   # Removes a file from the index
   unstage = reset HEAD --
+	linecount = !git ls-files -z | xargs -0 wc -l
 
 [help]
   autocorrect = 1
